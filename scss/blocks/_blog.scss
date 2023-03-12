@@ -1,0 +1,36 @@
+.blog-section {
+  margin-bottom: 30px;
+  .card {
+    cursor: pointer;
+    border-radius: 20px;
+    // height: 533px;
+
+    .card__bottom {
+      padding: 20px;
+      background: white;
+      border-radius: 0 0 15px 15px;
+      h2 {
+        font-size: 21px;
+      }
+
+      p {
+        color: #0000009b;
+        font-size: 16px;
+      }
+
+      .calendar_el {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          display: flex;
+          align-items: center;
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}

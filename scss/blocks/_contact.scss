@@ -1,0 +1,298 @@
+.contact {
+  background-color: white;
+  border: 1px solid $border-color;
+  padding: 40px;
+  border-radius: 10px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  &__left {
+    width: 60%;
+  }
+  &__right {
+    width: 35%;
+  }
+  &__title {
+    max-width: 640px;
+
+    &-text {
+      font-size: 2rem;
+      font-style: italic;
+    }
+  }
+
+  &__inputs {
+    max-width: 580px;
+    margin-top: 40px;
+
+    &__input {
+      border: 0px;
+      margin-top: 20px;
+      width: 100%;
+      display: block;
+      outline: none;
+      font-size: 17px;
+      padding: 5px 0;
+      border-bottom: 1px solid #272727;
+      &::placeholder {
+        color: #272727;
+      }
+    }
+  }
+
+  &__checkboxT {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+
+  &__checkbox {
+    margin-top: 30px;
+
+    &_left {
+      width: 50%;
+      &__from-checkbox {
+        margin-top: 30px;
+
+        &--input {
+          width: 20px;
+          height: 20px;
+          margin-top: 20px;
+        }
+
+        &--label {
+          font-size: 18px;
+          font-weight: 600;
+          max-width: 140px;
+        }
+      }
+    }
+
+    &_right {
+      width: 50%;
+      padding-left: 50px;
+      &__from-checkbox {
+        margin-top: 30px;
+
+        &--input {
+          width: 20px;
+          height: 20px;
+          margin-top: 20px;
+        }
+
+        &--label {
+          font-size: 18px;
+          font-weight: 600;
+          max-width: 140px;
+        }
+      }
+    }
+  }
+
+  &__ichimliklar {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(83, 83, 83, 0.1);
+    width: 100%;
+    min-height: 602px;
+
+    &__turlari {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &-cofee {
+        width: 49%;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        h2 {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 3rem;
+    padding-left: 2rem;
+    a {
+      font-size: 1.5rem;
+      color: $text-color;
+      font-weight: 600;
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .contact {
+    padding: 35px;
+    flex-wrap: wrap;
+    &__left {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__title {
+      margin: auto;
+      text-align: center;
+      &-text {
+        font-size: 1.8rem;
+      }
+    }
+    &__inputs {
+      max-width: 75%;
+      margin: 35px auto 0;
+    }
+
+    &__checkboxT {
+      font-size: 1.2rem;
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    &__checkbox {
+      margin-top: 25px;
+      &_left {
+        padding-left: 4rem;
+        &__from-checkbox {
+          margin-top: 25px;
+
+          &--input {
+            margin-top: 1rem;
+          }
+        }
+      }
+      &_right {
+        padding-left: 4rem;
+        &__from-checkbox {
+          margin-top: 25px;
+
+          &--input {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    &__ichimliklar {
+      min-height: auto;
+      &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+      &__turlari {
+        &-cofee {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    &__button {
+      margin-top: 2rem;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding: 25px;
+    &__title {
+      &-text {
+        font-size: 1.5rem;
+      }
+    }
+    &__inputs {
+      max-width: 85%;
+      margin: 25px auto 0;
+    }
+
+    &__checkboxT {
+      font-size: 1rem;
+      margin-top: 25px;
+    }
+
+    &__checkbox {
+      margin-top: 20px;
+      &_left {
+        padding-left: 0;
+        &__from-checkbox {
+          margin-top: 20px;
+        }
+      }
+      &_right {
+        padding-left: 0;
+        &__from-checkbox {
+          margin-top: 20px;
+        }
+      }
+    }
+    &__ichimliklar {
+      min-height: auto;
+      &__title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      &__turlari {
+        &-cofee {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    &__button {
+      margin-top: 2rem;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact {
+    padding: 1.5rem 1rem;
+    width: 95%;
+    &__inputs {
+      max-width: 100%;
+      margin: 2rem auto 0;
+    }
+    &__checkboxT {
+      margin-top: 2rem;
+    }
+    &__checkbox {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      &_left {
+        width: 100%;
+      }
+      &_right {
+        width: 100%;
+      }
+    }
+    &__ichimliklar {
+      &__title {
+        text-align: center;
+        margin-bottom: 1.6rem;
+        font-size: 1.3rem;
+      }
+      &__turlari {
+        justify-content: space-around;
+        &-cofee {
+          width: 35%;
+          margin-bottom: 1.5rem;
+          h2 {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    &__button {
+      a {
+        padding: 15px 30px;
+        background-color: $text-color;
+        display: inline-block;
+        color: white;
+        border-radius: 35px;
+      }
+    }
+  }
+}

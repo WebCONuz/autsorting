@@ -1,0 +1,84 @@
+.advantage {
+  margin-top: 50px;
+  padding-bottom: 50px;
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__cards--card {
+    width: calc(100% / 3 - 13px);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2.5px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid $border-color;
+    margin-bottom: 20px;
+
+    &-image {
+      width: 70px;
+      height: 70px;
+    }
+    &-title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &-line {
+      margin-top: 20px;
+    }
+    &-text {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .advantage {
+    &__title {
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+    &__cards--card {
+      width: calc(100% / 2 - 10px);
+      margin-bottom: 20px;
+
+      &-image {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .advantage {
+    &__title {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    &__cards--card {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &-image {
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .advantage {
+    padding: 0 20px;
+  }
+}
