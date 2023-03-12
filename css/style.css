@@ -349,8 +349,12 @@ template {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url("../images//background/bg-body.jpg");
+  background-image: url("../images/background/bg-body.jpg");
   overflow-x: hidden;
 }
 
@@ -849,6 +853,7 @@ header nav .wrapper .nav-services button.sm-button {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 150vh;
   background-image: url("../images/background/after.svg");
@@ -861,6 +866,7 @@ header nav .wrapper .nav-services button.sm-button {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 150vh;
   background-image: url("../images/background/before.svg");
@@ -1045,6 +1051,36 @@ header nav .wrapper .nav-services button.sm-button {
     padding: 0 20px;
   }
 }
+#portfolio {
+  position: relative;
+}
+#portfolio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background/bg-portfolio-left.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: -1;
+}
+#portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background/bg-portfolio-right.png");
+  background-size: 60%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .portfolio {
   padding: 1rem 0 3rem 0;
 }
@@ -1206,6 +1242,12 @@ header nav .wrapper .nav-services button.sm-button {
   }
 }
 @media only screen and (max-width: 576px) {
+  #portfolio::after {
+    display: none;
+  }
+  #portfolio::before {
+    display: none;
+  }
   .portfolio__title {
     font-size: 1rem;
   }
@@ -1213,6 +1255,23 @@ header nav .wrapper .nav-services button.sm-button {
     display: none;
   }
 }
+#services {
+  position: relative;
+}
+#services::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background/bg-service.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: -1;
+}
+
 .services {
   background-color: white;
   margin-top: 60px;
@@ -1296,6 +1355,12 @@ header nav .wrapper .nav-services button.sm-button {
   }
 }
 @media only screen and (max-width: 576px) {
+  #services {
+    position: relative;
+  }
+  #services::after {
+    display: none;
+  }
   .services {
     margin-top: 0px;
     margin-bottom: 40px;
@@ -1337,6 +1402,41 @@ header nav .wrapper .nav-services button.sm-button {
   width: 20px;
 }
 
+@media only screen and (max-width: 576px) {
+  .blog-section .blog__title h1.main-section-title {
+    margin-bottom: 10px;
+  }
+}
+#team {
+  position: relative;
+}
+#team::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 130vh;
+  background-image: url("../images/background/bg-portfolio-left.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: -1;
+}
+#team::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 130vh;
+  background-image: url("../images/background/bg-portfolio-right.png");
+  background-size: 60%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .team {
   margin-bottom: 90px;
 }
@@ -1367,6 +1467,14 @@ header nav .wrapper .nav-services button.sm-button {
   text-align: center;
 }
 
+@media only screen and (max-width: 576px) {
+  #team::after {
+    display: none;
+  }
+  #team::before {
+    display: none;
+  }
+}
 .contact {
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.5);
@@ -1638,38 +1746,58 @@ header nav .wrapper .nav-services button.sm-button {
     border-radius: 35px;
   }
 }
+footer {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 footer .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 80px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: auto;
   font-weight: bold;
 }
+footer .footer .footer-box {
+  width: auto;
+  padding: 0 1rem;
+}
 footer .logo {
-  font-size: 54px;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 footer .location {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 16px;
-  padding-left: 5px;
 }
 footer .location img {
+  width: 30px !important;
+  height: 30px !important;
   margin-right: 0.5rem;
+  display: block;
+}
+footer .location div p.top {
+  margin-bottom: 8px;
 }
 footer .phone_numbers {
   font-size: 18px;
 }
 footer .phone_numbers p {
+  display: flex;
   align-items: center;
-  height: 40px;
+}
+footer .phone_numbers p.top {
+  margin-bottom: 0.5rem;
+}
+footer .phone_numbers p img {
+  display: block;
+  margin-right: 10px;
+}
+footer .phone_numbers p span {
+  font-size: 16px;
 }
 footer .icons {
-  height: 40px;
-  width: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1677,59 +1805,62 @@ footer .icons {
 footer .icons-icon {
   cursor: pointer;
 }
+footer .icons-icon.middle {
+  margin: 0 10px;
+}
 footer .icons-icon:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition: 0.5;
 }
 
-@media only screen and (max-width: 768px) {
-  .footer {
+@media only screen and (max-width: 992px) {
+  footer .footer {
+    padding: 60px 0;
     flex-wrap: wrap;
     align-items: flex-start;
   }
-  .footer .logo {
+  footer .footer .logo {
     width: 50%;
     margin-bottom: 2rem;
     font-size: 44px;
   }
-  .footer .location {
+  footer .footer .location {
     width: 50%;
     margin-bottom: 2rem;
   }
-  .footer .phone_numbers {
+  footer .footer .phone_numbers {
     width: 50%;
   }
-  .footer div.box1 {
+  footer .footer div.box1 {
     width: 50%;
   }
-  .footer div.box1 .icons {
+  footer .footer div.box1 .icons {
     width: 100%;
     display: flex;
     justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 576px) {
-  .footer {
+  footer .footer {
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-top: 0px !important;
-    padding-bottom: 30px !important;
+    padding: 40px 0;
   }
-  .footer .logo {
+  footer .footer .logo {
     width: 100%;
     font-size: 36px;
     margin-bottom: 1rem;
   }
-  .footer .location {
+  footer .footer .location {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .footer .phone_numbers {
+  footer .footer .phone_numbers {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .footer div.box1 {
+  footer .footer div.box1 {
     width: 100%;
   }
 }

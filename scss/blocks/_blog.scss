@@ -34,3 +34,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .blog-section {
+    .blog__title {
+      h1.main-section-title {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
